@@ -28,7 +28,65 @@ body {
   margin-top: 6px;
 }
 
-/* MENU CONTAINER THAT JS WILL FILL */
-#menu {
-  padding: 40px;
+/* Menu item container */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+/* Emoji style */
+.emoji {
+  font-size: 60px;
+  width: 80px;
+  text-align: center;
+}
+
+/* Info (name + description + price) */
+.info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.desc {
+  margin: 6px 0 10px;
+  font-size: 16px;
+  color: #676767;
+}
+
+.price {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Add button */
+.add-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border: 2px solid #ccc;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect on + button */
+.add-btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Divider line */
+hr {
+  border: none;
+  border-top: 1px solid #e3e3e3;
+  margin: 0;
 }
