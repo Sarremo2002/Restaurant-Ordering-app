@@ -90,3 +90,61 @@ hr {
   border-top: 1px solid #e3e3e3;
   margin: 0;
 }
+
+/* Hidden at first */
+.hidden {
+  display: none;
+}
+
+/* Order panel layout */
+#order-panel {
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Title */
+.order-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-family: "Special Elite", serif;
+}
+
+/* Items container */
+#order-items {
+  margin-bottom: 20px;
+}
+
+/* Divider line */
+.order-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Total row */
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-family: "Special Elite", serif;
+}
+
+/* Button */
+.complete-order-btn {
+  width: 100%;
+  margin-top: 35px;
+  padding: 18px 0;
+  background: #00c873;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Special Elite", serif;
+}
+
+.complete-order-btn:hover {
+  opacity: 0.9;
+}
