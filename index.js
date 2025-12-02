@@ -47,10 +47,11 @@ function renderPreCheckout() {
   orderPanel.classList.remove("hidden");
 
   let orderHTML = "";
-  FoodArray.forEach(function (food) {
+  FoodArray.forEach(function (food, item) {
     orderHTML += `
       <div class="order-row">
         <p>${food.name}</p>
+        <button class="remove-btn" data-remove="${item}">remove</button>
         <p class="order-price">$${food.price}</p>
       </div>
     `;
