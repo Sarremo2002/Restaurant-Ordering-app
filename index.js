@@ -26,5 +26,15 @@ function render() {
 }
 render();
 document.addEventListener("click", function (e) {
-  console.log(e.target.dataset);
+  if (e.target.classList.contains("add-btn")) {
+    checkOut(e.target.dataset.id);
+  }
 });
+
+function checkOut(foodID) {
+  const targetFood = menuArray.filter(function (food) {
+    return food.id === Number(foodID);
+  })[0];
+  console.log(targetFood);
+}
+checkOut();
