@@ -1,5 +1,5 @@
 import { menuArray } from "./data.js";
-
+const completeOrder = document.getElementById("complete-order-btn");
 let FoodArray = [];
 
 function getMenuList() {
@@ -30,6 +30,9 @@ Menurender();
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("add-btn")) {
     checkOut(e.target.dataset.id);
+  }
+  if (e.target.classList.contains("remove-btn")) {
+    removeItem(e.target.dataset.remove);
   }
 });
 
@@ -62,4 +65,14 @@ function renderPreCheckout() {
     return sum + food.price;
   }, 0);
   document.getElementById("total-price").textContent = ` ${price}`;
+}
+
+function removeItem(item) {
+  FoodArray.splice(item, 1);
+
+  if (FoodArray.length === 0) {
+    document.getElementById("order-panel").classList.add("hidden");
+    return;
+  }
+  renderPreCheckout();
 }
