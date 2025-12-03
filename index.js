@@ -83,6 +83,15 @@ completeOrder.addEventListener("click", function () {
   document.getElementById("payment-panel").classList.remove("hidden");
 });
 
-paymentBtn.addEventListener("click", function () {
-  console.log(`Thanks your order is on the way`);
+paymentBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("customer-name").value;
+
+  document.getElementById("payment-panel").classList.add("hidden");
+  document.getElementById("payment-overlay").classList.add("hidden");
+
+  const orderPanel = document.getElementById("order-panel");
+  orderPanel.innerHTML = `<p class="success-msg">Thanks, ${name}! Your order is on its way</p>`;
+  orderPanel.classList.remove("hidden");
 });
