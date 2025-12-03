@@ -163,3 +163,69 @@ hr {
 .remove-btn:hover {
   color: #000000;
 }
+
+#payment-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+
+  z-index: 9999; /* stay above everything */
+}
+
+/* Optional dark background overlay */
+#payment-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+}
+
+/* Hide panel by default */
+.hidden {
+  display: none;
+}
+
+/* Payment Title */
+.payment-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: "Special Elite", serif;
+}
+
+/* Inputs */
+.payment-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+/* Pay Button */
+.payment-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: #16db99;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Special Elite", serif;
+}
+
+.payment-btn:hover {
+  opacity: 0.9;
+}

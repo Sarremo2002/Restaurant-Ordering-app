@@ -30,7 +30,44 @@
         <p class="total-value" id="total-price">$0</p>
       </div>
 
-      <button class="complete-order-btn">Complete order</button>
+      <button id="complete-order-btn" class="complete-order-btn">
+        Complete order
+      </button>
+    </section>
+    <div id="payment-overlay" class="hidden"></div>
+
+    <section id="payment-panel" class="hidden">
+      <form id="payment-form">
+        <h2 class="payment-title">Enter card details</h2>
+
+        <input
+          type="text"
+          name="customer-name"
+          placeholder="Enter your name"
+          required
+          class="payment-input"
+        />
+
+        <input
+          type="number"
+          name="card-number"
+          placeholder="Enter card number"
+          required
+          class="payment-input"
+        />
+
+        <input
+          type="number"
+          minlength="3"
+          maxlength="3"
+          name="cvv"
+          placeholder="Enter CVV"
+          required
+          class="payment-input"
+        />
+
+        <button type="submit" class="payment-btn">Pay</button>
+      </form>
     </section>
 
     <script type="module" src="index.js"></script>

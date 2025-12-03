@@ -76,3 +76,8 @@ function removeItem(item) {
   }
   renderPreCheckout();
 }
+
+completeOrder.addEventListener("click", function () {
+  document.getElementById("payment-overlay").classList.remove("hidden");
+  document.getElementById("payment-panel").classList.remove("hidden");
+});
