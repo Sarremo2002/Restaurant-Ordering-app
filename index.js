@@ -1,5 +1,6 @@
 import { menuArray } from "./data.js";
 const completeOrder = document.getElementById("complete-order-btn");
+const paymentBtn = document.getElementById("payment-btn");
 let FoodArray = [];
 
 function getMenuList() {
@@ -80,4 +81,8 @@ function removeItem(item) {
 completeOrder.addEventListener("click", function () {
   document.getElementById("payment-overlay").classList.remove("hidden");
   document.getElementById("payment-panel").classList.remove("hidden");
+});
+
+paymentBtn.addEventListener("click", function () {
+  console.log(`Thanks your order is on the way`);
 });
